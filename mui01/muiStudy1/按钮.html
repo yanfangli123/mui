@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">按钮</h1>
+		</header>
+		<div class="mui-content">
+		    <button type="button" class="mui-btn mui-btn-blue">按钮1</button>
+		    <button type="button" class="mui-btn mui-btn-red mui-btn-outlined">按钮2</button>
+		    <button type="button" class="mui-btn mui-btn-yellow mui-btn-block">按钮3</button>
+		    <button type="button" data-loading-icon-position="right" class="mui-btn" id="bt">确认</button>
+		</div>
+		<script>
+			window.onload=function(){
+				var oBtn=document.getElementById("bt");
+				oBtn.addEventListener("tap",function(){
+					mui(this).button('loading');
+					setTimeout(function(){
+						 mui(oBtn).button('reset');
+					},2000)
+				})
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.alert('欢迎使用Hello MUI', 'Hello MUI', function() {
+   			mui.toast('你刚关闭了警告框');
+			});
+			
+			mui.confirm('您确定要删除吗?','ha',new Array('否','是'),function(e){
+				if(e.index == 1){mui.toast('是');}else{mui.toast('否');}
+			});
+			mui.prompt('请输入年龄','年龄',new Array("确定","取消"),function(e){
+				if(e.index == 1){mui.toast(e.value);}else{mui.toast('您取消了输入');}
+			});
+			mui.toast('hi...');
+		</script>
+		
+	</body>
+
+</html>
