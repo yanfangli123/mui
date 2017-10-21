@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">开关</h1>
+		</header>
+		<div class="mui-content">
+		    <div class="mui-input-row">
+		        <label>Switch</label>
+		        <div class="mui-switch  mui-switch-blue" id="myswitch">
+		            <div class="mui-switch-handle"></div>
+		        </div>
+		    </div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			var isActive=document.getElementById("myswitch").classList.contains("mui-active");
+			/*if(isActive){
+				mui.toast("打开了")
+			}else{
+				mui.toast("关闭了")
+			}*/
+			
+			document.getElementById("myswitch").addEventListener("toggle",function(e){
+				if(e.detail.isActive){
+					mui.toast("你启动了开关")
+				}else{
+					mui.toast("你关闭了开关")
+				}
+			})
+			
+		</script>
+	</body>
+
+</html>

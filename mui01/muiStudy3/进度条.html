@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">进度条</h1>
+		</header>
+		<div class="mui-content">
+		    <div class="mui-progressbar" id="demo1" style="margin: 80px 0 40px 0;" mui-progressbar-infinite>
+		    	<span></span>
+		    </div>
+		    <button type="button" class="mui-btn mui-btn-blue" onclick="setprogress()">按钮</button>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			function setprogress(){
+				var obj=mui("#demo1");
+				var step=0;
+				setInterval(function(){
+					obj.progressbar({progress:step}).show();
+					step+=5;
+				},1000)
+				
+			}
+		</script>
+		
+	</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	    <style type="text/css">
+	    	.mui-backdrop{
+	    		position: fixed;
+	    		top: 0px;
+	    		right: 0px;
+	    		left: 0px;
+	    		bottom: 0px;
+	    		z-index: 998;
+	    		background: rgba(255,0,0,.2);
+	    	}
+	    </style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">遮罩蒙版</h1>
+		</header>
+		<div class="mui-content">
+		    <button type="button" class="mui-btn mui-btn-blue mui-btn-block" onclick="show()">点我</button>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			function show(){
+				var mask=mui.createMask(callback1);
+				mask.show();
+			}
+			function callback1(){
+				mui.toast("您取消了蒙版");
+			}
+		</script>
+	</body>
+
+</html>
